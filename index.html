@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src https://api.anthropic.com; img-src 'self' data:; media-src 'self' blob:; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Cours et entraînement à l'allemand A1 → B1 pour s'installer en Suisse alémanique, avec Claude, le micro et la voix.">
+<title>Deutsch-Werkstatt</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23c7301d'/%3E%3Crect x='13' y='6' width='6' height='20' fill='%23fff'/%3E%3Crect x='6' y='13' width='20' height='6' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="top-row">
+      <div class="brand"><span class="cross" aria-hidden="true"></span><h1>Deutsch-Werkstatt</h1><span class="label" id="lvlLabel">A1 → A2</span></div>
+      <div class="status">
+        <span class="pill" title="Minutes d'allemand aujourd'hui"><span class="mono" id="todayMin">0</span>&nbsp;/ 30 min</span>
+        <button class="pill pill-btn" id="keyPill" type="button"><span class="dot wait"></span><span>Clé API…</span></button>
+        <span class="pill" id="micPill"><span class="dot wait"></span><span>Micro…</span></span>
+      </div>
+    </div>
+    <nav class="tabs" role="tablist" aria-label="Sections">
+      <button class="tab" role="tab" data-tab="heute" title="jour">Heute</button>
+      <button class="tab" role="tab" data-tab="kurs" title="cours">Kurs</button>
+      <button class="tab" role="tab" data-tab="gespraech" title="dialogue">Gespräch</button>
+      <button class="tab" role="tab" data-tab="sprechen" title="oral">Sprechen</button>
+      <button class="tab" role="tab" data-tab="schreiben" title="écrit">Schreiben</button>
+      <button class="tab" role="tab" data-tab="uebungen" title="exos">Übungen</button>
+      <button class="tab" role="tab" data-tab="wortschatz" title="mots">Wortschatz</button>
+      <button class="tab" role="tab" data-tab="hoeren" title="écoute">Hören &amp; Lesen</button>
+      <button class="tab" role="tab" data-tab="reglages">Réglages</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <noscript><p class="note err">Ce site a besoin de JavaScript.</p></noscript>
+  <section data-view="heute" id="v-heute"></section>
+  <section data-view="kurs" id="v-kurs" hidden></section>
+  <section data-view="gespraech" id="v-gespraech" hidden></section>
+  <section data-view="sprechen" id="v-sprechen" hidden></section>
+  <section data-view="schreiben" id="v-schreiben" hidden></section>
+  <section data-view="uebungen" id="v-uebungen" hidden></section>
+  <section data-view="wortschatz" id="v-wortschatz" hidden></section>
+  <section data-view="hoeren" id="v-hoeren" hidden></section>
+  <section data-view="reglages" id="v-reglages" hidden></section>
+</main>
+</body>
+</html>
